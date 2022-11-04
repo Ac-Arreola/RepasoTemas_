@@ -107,8 +107,8 @@
                     {{ $errors->first('txtEmail') }} </p>
             </div>
  <!-- BOTÓN --> 
-            <div class="text-center">
-                <button type="submit" class="btn btn-secondary mt-3">GUARDAR REGISTRO</button>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-outline-info mt-3 fwd-bold">GUARDAR REGISTRO</button>
 
             </div>
             

@@ -12,6 +12,11 @@
  <body style="background: rgb(191, 226, 228)">
                       <!-- INICIA NAVBAR -->
                       <nav class="navbar navbar-expand-lg navbar-light " style="background: cadetblue">
+                        <div class="mt-2 mb-2">
+                        <a class="navbar-brand" href="principal">
+                          <img src="{{asset('img\leoSJ.png')}}" alt="" width="80" height="80">
+                        </a></div>
+                        
                         <div class="container-fluid fw-bold font-monospace mt-2 mb-2">
                           <a class="navbar-brand text-light" href="principal"> <h3>PÁGINA PRINCIPAL</h3></a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +39,7 @@
   
       <!--PIE DE PAGINA--->
       <footer class="main-footer mt-5" width=100% >
-      <div class="alert alert-dark text-center fw-bold fst-italic" role="alert" style="background: cadetblue">
+      <div class="alert alert-dark text-center fst-italic" role="alert" style="background: cadetblue">
         <em> Biblioteca LeoSan_Juan CopyRight®  {{ date('D/M/Y') }} </em>
      </div>
    </footer>  
