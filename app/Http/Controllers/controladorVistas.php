@@ -11,7 +11,10 @@ class controladorVistas extends Controller
 
 public function validarFormulario(validarLibro $req){
     //return 'info recibida'
-    return redirect('registro')->with('Confirmacion','Datos enviados');
+    return redirect('registro')
+    ->with('Confirmacion','Datos enviados')
+    ->with('title',$req->txtTitulo);
+    
 }
 
 public function vwPrincipal(){

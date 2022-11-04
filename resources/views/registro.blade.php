@@ -6,11 +6,15 @@
  <!-- SI EN LA SESIÓN HAY UNA CONFIRMACION SE MUESTRA EL ALERT DE SWEETALERT-->
 
  @if(session()->has('Confirmacion'))
-       {!!"<script>  Swal.fire(
-         'Good!',
-         'El registro ha llegado al controlador!',
-         'success'
-       ) </script> "!!}
+ 
+ <?php $titulo=session()->get('title') ?>
+
+            <script>  Swal.fire(
+                'Todo correcto: ',
+                'El libro <?php echo e($titulo); ?> ha sido guardado correctamente',
+                'success'
+            ) </script> 
+       
     @endif
 
 <div class="container mt-5 mb-5 col-md-7 "> 
