@@ -20,7 +20,7 @@
 <div class="container mt-5 mb-5 col-md-7 "> 
     <div class="card shadow-sm mb-5 fw-bold fst-italic " > 
 
-    <div class="card-header fw-bold font-monospace text-center text-light" style="background: cadetblue">
+    <div class="card-header fw-bold font-monospace text-center text-light" >
         <h3> Registrar nuevo libro </h3>
     </div>
 

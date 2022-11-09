@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\validarLibro;
+use App\Http\Requests\validarAutor;
 
 class controladorVistas extends Controller
 
@@ -16,13 +17,24 @@ public function validarFormulario(validarLibro $req){
     ->with('title',$req->txtTitulo);
     
 }
-
+ 
+public function validarFormulario2(validarAutor $req){
+    //return 'info recibida'
+    return redirect('autores')
+   ->with('Confirmacion','Datos enviados')
+   ->with('name',$req->txtFName);
+    ;
+}
 public function vwPrincipal(){
     return view('principal');
 }
 
 public function vwRegistro(){
     return view('registro');
+}
+
+public function vwAutores(){
+    return view('autores');
 }
 
 }

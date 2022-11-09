@@ -24,4 +24,8 @@ Route::get('principal',[controladorVistas::class, 'vwPrincipal']);
 
 Route::get('registro',[controladorVistas::class, 'vwRegistro']);
 
+Route::get('autores',[controladorVistas::class, 'vwAutores']);
+
 Route::post('RegistrarLibro',[controladorVistas::class,'validarFormulario'])->name('Registrar');
+
+Route::post('RegistrarAutor',[controladorVistas::class,'validarFormulario2'])->name('RegistrarA');
