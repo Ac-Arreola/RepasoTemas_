@@ -20,7 +20,7 @@ use App\Http\Controllers\controladorVistas;
     });
 */
 
-Route::get('principal',[controladorVistas::class, 'vwPrincipal']);
+Route::get('/',[controladorVistas::class, 'vwPrincipal']);
 
 Route::get('registro',[controladorVistas::class, 'vwRegistro']);
 
