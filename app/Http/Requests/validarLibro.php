@@ -25,17 +25,12 @@ class validarLibro extends FormRequest
     {
         return [
 
-                'txtIsbn'=>'required',
-                'txtIsbn'=>'min:13',
-                'txtIsbn'=>'numeric',
+                'txtIsbn'=>'required|numeric|digits_between:13,99',
                 'txtTitulo'=>'required',
                 'txtAutor'=>'required',
-                'txtPaginas'=>'required',
-                'txtPaginas'=>'numeric',
+                'txtPaginas'=>'required|numeric',
                 'txtEditorial'=>'required',
-                'txtEmail' =>'required',
-                'txtEmail' =>'email'
-
+                'txtEmail' =>'required|email'
         ];
     }
 }

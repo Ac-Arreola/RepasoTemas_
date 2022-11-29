@@ -18,10 +18,9 @@ return new class extends Migration
             $table->string('isbnLibro');
             $table->string('tituloLibro');
             $table->string('autorLibro');
-            $table->string('numPagsLibro');
+            $table->string('paginasLibro');
             $table->string('editorialLibro');
-            $table->string('emailEditLibro');
-            
+            $table->string('emailLibro'); 
         });
     }
 

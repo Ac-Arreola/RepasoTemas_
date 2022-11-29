@@ -18,25 +18,55 @@
                         </a></div>
                         
                         <div class="container-fluid fw-bold font-monospace mt-2 mb-2">
-                          <a class="navbar-brand text-light" href="/"> <h3>PÁGINA PRINCIPAL</h3></a>
+                          <a class="navbar-brand text-light" 
+                          href="/"> <h4>PÁGINA_PRINCIPAL</h4></a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
+                          
+                          {{--<li class="nav-item">
+                            <a class="nav-link" 
+                            {{ request()->routeIs('libroIndex')? '':'Hidden' }}  
+                            href="{{route('libroCreate')}}">Registrar libro</a>
+                          </li>--}}
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                              <li class="nav-item">
-                                <a class="nav-link active text-light" aria-current="page" href="registro"><h4>REGISTRAR LIBRO</h4></a>
-                              </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-light" 
+                                  href="{{route('libroIndex')}}"><h5>VER_LIBROS</h5></a>
+                                </li>
                             </ul>
                           </div>
+
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item">
-                                <a class="nav-link active text-light" aria-current="page" href="autores"><h4>REGISTRAR AUTOR</h4></a>
+                                <a class="nav-link active text-light" aria-current="page" 
+                                href="{{route('autorIndex')}}"><h5>VER_AUTORES</h5></a>
                               </li>
                             </ul>
                           </div>
                           
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link text-light" 
+                                {{ request()->routeIs('autorIndex')? '':'Hidden' }}  
+                                  href="{{route('autorCreate')}}"> <h5>REGISTRAR_AUTOR</h5></a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link text-light" 
+                                {{ request()->routeIs('libroIndex')? '':'Hidden' }} 
+                                href="{{route('libroCreate')}}"><h5>REGISTRAR_LIBRO</h5></a>
+                              </li>
+                            </ul>
+                          </div>
+
                         </div>
                       </nav>
                      <!-- TERMINA NAVBAR --> 

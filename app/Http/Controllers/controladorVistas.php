@@ -21,7 +21,7 @@ public function validarFormulario(validarLibro $req){
 public function validarFormulario2(validarAutor $req){
     //return 'info recibida'
     return redirect('autores')
-   ->with('Confirmacion','Datos enviados')
+   ->with('confirmación','Datos enviados')
    ->with('name',$req->txtFName);
     ;
 }
@@ -34,7 +34,7 @@ public function vwRegistro(){
 }
 
 public function vwAutores(){
-    return view('autores');
+    return view('registrarAutor');
 }
 
 }

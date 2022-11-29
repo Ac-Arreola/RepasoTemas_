@@ -37,7 +37,7 @@
             <div class="container mt-2 mb-2">
 
  <!-- INICIA FORMULARIO MÉTODO POST ENVÍA A RUTA -->
-        <form class="m-4" method="post" action="RegistrarLibro" >
+        <form class="m-4" method="post" action="{{route('libroStore')}}">
             @csrf
             <p><em> De favor, rellena lo que se te pide . </em></p>
  <!-- Primer input --> 
@@ -64,15 +64,17 @@
             </div>
  <!-- Tercer input --> 
             <div class="mb-3">
-                <label class="form-label"> Autor: </label>
-                <input type="text" class="form-control" 
-                name="txtAutor" 
-                id="" 
-                value="{{old('txtAutor')}}" 
-                placeholder="Ingresa el Autor del libro">
-                <p class="text-info fst-italic fw-bold"> 
-                    {{ $errors->first('txtAutor') }} </p>
+                <label for="autor" class="form-label">Autor</label>
             </div>
+            <select class="form-select" aria-label="Default select example" 
+                id="autor" name="txtAutor">
+                <option selected disabled>Selecciona...</option>
+                @foreach ($consultaAutores as $autor)
+                <option value="{{$autor->nombreAutor}}">{{$autor->nombreAutor}}</option>
+                @endforeach
+              </select>
+              <p class="text-primary fst-italic">{{$errors->first('txtAutor')}}</p>
+                   
  <!-- Cuarto input --> 
             <div class="mb-3">
                 <label class="form-label"> Numero de Páginas: </label>

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('tb_autores', function (Blueprint $table) {
             $table->increments('idAutor');
-            $table->string('nombreAutor');
-            $table->string('fechaNac');
-            $table->string('Numlibros');
+            $table->string('nombreAutor');  
+            $table->string('fechaNacimientoAutor');
+            $table->string('librosAutor');
         });
     }
 
