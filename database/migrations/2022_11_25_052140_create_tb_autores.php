@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb_autores', function (Blueprint $table) {
-            $table->increments('idAutor');
+            $table->bigIncrements('idAutor');
             $table->string('nombreAutor');  
             $table->string('fechaNacimientoAutor');
             $table->string('librosAutor');

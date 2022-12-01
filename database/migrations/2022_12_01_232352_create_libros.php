@@ -14,13 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb_libros', function (Blueprint $table) {
-            $table->increments('idLibro');
+            $table->engine="InnoDB";
+            $table->bigIncrements('idLibro');
             $table->string('isbnLibro');
             $table->string('tituloLibro');
-            $table->string('autorLibro');
+            
             $table->string('paginasLibro');
             $table->string('editorialLibro');
             $table->string('emailLibro'); 
+            $table->bigInteger('autorLibro')->unsigned();
+            $table->integer('autorLibro')->references('idAutor')->ontable('tb_autores');
         });
     }
 
@@ -31,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_libros');
+        Schema::dropIfExists('libros');
     }
 };
