@@ -71,7 +71,7 @@ class controladorLibros extends Controller
     public function edit($id)
     {
         $consultaID = DB::table('tb_libros')->where('idLibro',$id)->first();
-        $consultaAutores = DB::table('_tabla_autores')->get();
+        $consultaAutores = DB::table('tb_autores')->get();
     
         return view('editarLibro',compact('consultaID','consultaAutores'));
     }

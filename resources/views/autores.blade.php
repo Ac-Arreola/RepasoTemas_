@@ -18,10 +18,10 @@
     @endif
     
     @if (session()->has('edición'))
-    <?php $titulo = session()->get('titulo')?>
+    <?php $nombre = session()->get('name')?>
     {!!"<script>Swal.fire(
         'Bien hecho!',
-        'Se ha editado el autor: {$titulo} correctamente!',
+        'Se ha editado el autor: {$nombre} correctamente!',
         'success'
       )</script>"!!}
       
@@ -59,13 +59,19 @@
                 <tr>
                     <th scope="row">{{$autor->nombreAutor}}</th>
                     <td >{{$autor->fechaNacimientoAutor}}</td>
-                    <td ><a type="button" class="btn btn-success" 
-                        href="{{route('autorLibros',$autor->nombreAutor)}}">Ver libros</a></td>
+                    <td ><a type="button" class="btn btn-outline-light" style="background: rgb(66, 165, 187)" 
+                        href="{{route('autorLibros',$autor->nombreAutor)}}"> 
+                        <img src="{{asset('img\vision.png')}}" alt="" width="20" height="20">
+                        Ver libros</a></td>
                     <td>
                         <a type="button" href="{{route('autorEdit',$autor->idAutor)}}" 
-                            class="btn btn-warning">Editar</a>
+                            class="btn btn-warning">
+                            <img src="{{asset('img\editar.png')}}" alt="" width="20" height="20">
+                            Editar</a>
                         <a type="button" class="btn btn-danger" 
-                        href="{{route('autorShow',$autor->idAutor)}}">Eliminar</a>
+                        href="{{route('autorShow',$autor->idAutor)}}">
+                        <img src="{{asset('img\borrar.png')}}" alt="" width="20" height="20">
+                        Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

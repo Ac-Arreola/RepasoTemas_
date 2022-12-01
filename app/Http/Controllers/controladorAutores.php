@@ -91,7 +91,7 @@ class controladorAutores extends Controller
             "librosAutor" =>  $request->input('txtNLibros'),
            
         ]);
-        return redirect('autores/index')->with('edición','abc')->with('titulo',$request->txtFName);
+        return redirect('autores/index')->with('edición','abc')->with('name',$request->txtFName);
     }
 
     /**

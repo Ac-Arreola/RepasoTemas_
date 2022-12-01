@@ -77,7 +77,8 @@
   
       <!--PIE DE PAGINA--->
       <footer class="main-footer mt-5" width=100% >
-      <div class="alert alert-dark text-center fst-italic" role="alert" style="background: cadetblue">
+      <div class="alert alert-dark text-center fst-italic" 
+      role="alert" style="background: cadetblue">
         <em> Biblioteca LeoSan_Juan CopyRight®  {{ date('D/M/Y') }} </em>
      </div>
    </footer>  
