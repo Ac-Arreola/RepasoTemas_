@@ -56,8 +56,12 @@
                     <td >{{$libros->tituloLibro}}</td>
                     <td >{{$libros->autorLibro}}</td>
                     <td>
-                        <a type="button" href="{{route('libroEdit',$libros->idLibro)}}" class="btn btn-warning">Editar</a>
-                        <a type="button" class="btn btn-danger" href="{{route('libroShow',$libros->idLibro)}}">Eliminar</a>
+                        <a type="button" href="{{route('libroEdit',$libros->idLibro)}}" class="btn btn-warning">
+                          <img src="{{asset('img\editar.png')}}" alt="" width="20" height="20">
+                          Editar</a>
+                        <a type="button" class="btn btn-danger" href="{{route('libroShow',$libros->idLibro)}}">
+                          <img src="{{asset('img\borrar.png')}}" alt="" width="20" height="20">
+                          Eliminar</a>
                     </td>
                 </tr>
                 @endforeach
