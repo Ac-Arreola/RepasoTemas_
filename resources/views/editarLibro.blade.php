@@ -20,7 +20,12 @@
 
 
 {{-- Formulario --}}
-<div class="card">
+<div class="container mt-5 col-md-7 ">
+
+  <div class="card text-center card shadow-sm mb-3 fw-bold ">
+    <div class="card-header fw-bold"> 
+      <h3>  ACTUALIZAR LIBRO </h3>
+     </div>
     <div class="card-body">
         <form action="{{route('libroUpdate',$consultaID->idLibro)}}" method="post">
             @csrf
@@ -67,11 +72,22 @@
                 value="{{$consultaID->emailLibro}}">
                 <p class="text-primary fst-italic">{{$errors->first('txtEmail')}}</p>
             </div>
-            <button type="submit" class="btn btn-primary">Actualizar</button>
+            
+          
+            <div class="card-footer text-muted">
+
+              <!-- BOTÓN --> 
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="submit" class="btn btn-outline-light mt-2"
+                      style="background: rgb(59, 177, 196)" > 
+                          ACTUALIZAR </button>
+              </div>
+            </div>
+
           </form>
     </div>
   </div>
-
+</div>
   
 
 

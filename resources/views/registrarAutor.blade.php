@@ -7,7 +7,6 @@
 
 
 <div class="container mt-5 col-md-7">
-    <h1 class="display-2 text-center mb-5 fw-bold"> Registrar autores </h1>
 
     @if ($errors->any())
     @foreach ($errors->all() as $error)    
@@ -21,10 +20,10 @@
         
    
 
-    <div class="card text-center  mb-5 ">
+    <div class="card text-center card shadow-sm mb-3 fw-bold  ">
 
         <div class="card-header fw-bold"> 
-           REGISTRAR NUEVO AUTOR
+         <h3>  REGISTRAR NUEVO AUTOR </h3>
         </div>
 
         <div class="card-body">
@@ -68,9 +67,16 @@
                 
         </div>
 
+
+        
+        
         <div class="card-footer text-muted">
-            <div class="d-grid gap-2 col-6 mx-auto mt-2 mb-2">
-                <button class="btn btn-warning fw-bold" type="submit"> Guardar Autor </button>
+
+        <!-- BOTÓN --> 
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-outline-light mt-2 mb-2"
+                style="background: rgb(59, 177, 196)" > 
+                    GUARDAR AUTOR </button>
         </div>
         
     </form>

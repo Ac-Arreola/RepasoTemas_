@@ -37,9 +37,9 @@
 
 
 {{-- Libros --}}
-
+<div class="container mt-5" >
 <div class="card">
-    <div class="card-header"><h1>LIBROS DEL AUTOR</h1></div>
+    <div class="card-header text-center"><h4>LIBROS DEL AUTOR</h4></div>
     <div class="card-body">
         <table class="table">
             <thead>
@@ -58,10 +58,12 @@
                     <td >{{$libros->autorLibro}}</td>
                     <td>
                         <a type="button" href="{{route('libroEdit',$libros->idLibro)}}" 
-                            class="btn btn-warning">
+                            class="btn btn-outline-light"
+                            style="background: rgb(59, 177, 196)" >
                             <img src="{{asset('img\editar.png')}}" alt="" width="20" height="20">
                             Editar</a>
-                        <a type="button" class="btn btn-danger" 
+                        <a type="button" class="btn btn-outline-light"
+                        style="background: rgb(189, 21, 80)" 
                         href="{{route('libroShow',$libros->idLibro)}}">
                         <img src="{{asset('img\borrar.png')}}" alt="" width="20" height="20">
                         Eliminar</a>
@@ -71,6 +73,7 @@
             </tbody>
           </table>
     </div>
+</div>
 </div>
 
   

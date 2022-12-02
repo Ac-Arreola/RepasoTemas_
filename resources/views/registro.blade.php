@@ -18,11 +18,9 @@
     @endif
 
 <div class="container mt-5 mb-5 col-md-7 "> 
-    <div class="card shadow-sm mb-5 fw-bold fst-italic " > 
+    <div class="card shadow-sm mb-3 fw-bold " > 
 
-    <div class="card-header fw-bold font-monospace text-center text-light" >
-        <h3> Registrar nuevo libro </h3>
-    </div>
+    
 
     @if($errors->any())
 
@@ -32,12 +30,15 @@
     @endforeach
     
     @endif
-    
-        <div class="card-body">
+
+    <div class="card-header fw-bold text-center" >
+        <h3> REGISTRAR NUEVO LIBRO </h3>
+    </div>
+        <div class="card-body fst-italic ">
             <div class="container mt-2 mb-2">
 
  <!-- INICIA FORMULARIO MÉTODO POST ENVÍA A RUTA -->
-        <form class="m-4" method="post" action="{{route('libroStore')}}">
+        <form class="m-2" method="post" action="{{route('libroStore')}}">
             @csrf
             <p><em> De favor, rellena lo que se te pide . </em></p>
  <!-- Primer input --> 
@@ -70,7 +71,7 @@
                 id="autor" name="txtAutor">
                 <option selected disabled>Selecciona...</option>
                 @foreach ($consultaAutores as $autor)
-                <option value="{{$autor->nombreAutor}}">{{$autor->nombreAutor}}</option>
+                <option value="{{$autor->idAutor}}">{{$autor->nombreAutor}}</option>
                 @endforeach
               </select>
               <p class="text-primary fst-italic">{{$errors->first('txtAutor')}}</p>
@@ -108,14 +109,20 @@
                 <p class="text-info fst-italic fw-bold"> 
                     {{ $errors->first('txtEmail') }} </p>
             </div>
+        </div>
+    </div>
  <!-- BOTÓN --> 
+        <div class="card-footer text-muted">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-outline-info mt-3 fwd-bold">GUARDAR REGISTRO</button>
+                <button type="submit" class="btn btn-outline-light mt-2 mb-2"
+                style="background: rgb(59, 177, 196)" 
+                >GUARDAR REGISTRO</button>
 
             </div>
-            
-            </div>
         </div>
+            
+            
+        
 
     </div>
 </div>

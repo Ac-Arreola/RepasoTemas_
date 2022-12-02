@@ -35,18 +35,14 @@
       
 @endif
 
+<h1 class="text-center mt-5 fw-bold">✧ AUTORES ✧</h1>
 
-{{-- Manejo de errores --}}
-
-
-
-
-{{-- Libros --}}
-
+{{-- autores --}}
+<div class="container mt-5">
 <div class="card">
     <div class="card-body">
-        <table class="table">
-            <thead>
+        <table class="table text-center mt-3"  style="background: rgba(12, 172, 180, 0.692)">
+            <thead class="table-active">
               <tr>
                 <th scope="col">Autor:</th>
                 <th scope="col">Fecha de Nacimiento:</th>
@@ -54,21 +50,23 @@
                 <th scope="col">Acciones:</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table table-info">
                 @foreach ($consultaAutores as $autor)
                 <tr>
                     <th scope="row">{{$autor->nombreAutor}}</th>
                     <td >{{$autor->fechaNacimientoAutor}}</td>
-                    <td ><a type="button" class="btn btn-outline-light" style="background: rgb(66, 165, 187)" 
+                    <td ><a type="button" class="btn btn-outline-light" style="background: rgb(142, 65, 201)" 
                         href="{{route('autorLibros',$autor->nombreAutor)}}"> 
                         <img src="{{asset('img\vision.png')}}" alt="" width="20" height="20">
                         Ver libros</a></td>
                     <td>
                         <a type="button" href="{{route('autorEdit',$autor->idAutor)}}" 
-                            class="btn btn-warning">
+                            class="btn btn-outline-light"
+                            style="background: rgb(59, 177, 196)" >
                             <img src="{{asset('img\editar.png')}}" alt="" width="20" height="20">
                             Editar</a>
-                        <a type="button" class="btn btn-danger" 
+                        <a type="button" class="btn btn-outline-light"
+                        style="background: rgb(189, 21, 80)"  
                         href="{{route('autorShow',$autor->idAutor)}}">
                         <img src="{{asset('img\borrar.png')}}" alt="" width="20" height="20">
                         Eliminar</a>
@@ -78,6 +76,7 @@
             </tbody>
           </table>
     </div>
+</div>
 </div>
 
 @endsection

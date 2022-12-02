@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
- <body style="background: rgb(191, 226, 228)">
+ <body style="background: rgb(191, 226, 228)" >
                       <!-- INICIA NAVBAR -->
                       <nav class="navbar navbar-expand-lg navbar-light " style="background: cadetblue">
                         <div class="mt-2 mb-2">
@@ -17,9 +17,9 @@
                           <img src="{{asset('img\leoSJ.png')}}" alt="" width="80" height="80">
                         </a></div>
                         
-                        <div class="container-fluid fw-bold font-monospace mt-2 mb-2">
+                        <div class="container-fluid fw-bold font-family mt-2 mb-2">
                           <a class="navbar-brand text-light" 
-                          href="/"> <h4>PÁGINA_PRINCIPAL</h4></a>
+                          href="/"> <h4>PÁGINA PRINCIPAL</h4></a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
@@ -33,7 +33,9 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                   <a class="nav-link text-light" 
-                                  href="{{route('libroIndex')}}"><h5>VER_LIBROS</h5></a>
+                                  href="{{route('libroIndex')}}">
+                                  <img src="{{asset('img\libro.png')}}" alt="" width="35" height="35">
+                                    VER LIBROS</a>
                                 </li>
                             </ul>
                           </div>
@@ -42,7 +44,9 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item">
                                 <a class="nav-link active text-light" aria-current="page" 
-                                href="{{route('autorIndex')}}"><h5>VER_AUTORES</h5></a>
+                                href="{{route('autorIndex')}}">
+                                <img src="{{asset('img\autor.png')}}" alt="" width="35" height="35">
+                                  VER AUTORES</a>
                               </li>
                             </ul>
                           </div>
@@ -52,7 +56,9 @@
                               <li class="nav-item">
                                 <a class="nav-link text-light" 
                                 {{ request()->routeIs('autorIndex')? '':'Hidden' }}  
-                                  href="{{route('autorCreate')}}"> <h5>REGISTRAR_AUTOR</h5></a>
+                                  href="{{route('autorCreate')}}"> 
+                                  <img src="{{asset('img\registro.png')}}" alt="" width="35" height="35">
+                                    REGISTRAR AUTOR</a>
                               </li>
                             </ul>
                           </div>
@@ -62,7 +68,9 @@
                               <li class="nav-item">
                                 <a class="nav-link text-light" 
                                 {{ request()->routeIs('libroIndex')? '':'Hidden' }} 
-                                href="{{route('libroCreate')}}"><h5>REGISTRAR_LIBRO</h5></a>
+                                href="{{route('libroCreate')}}">
+                                <img src="{{asset('img\libroadd.png')}}" alt="" width="35" height="35">
+                                  REGISTRAR LIBRO</a>
                               </li>
                             </ul>
                           </div>
